@@ -18,3 +18,19 @@
 //   faccio un check che il numero inserito non sia già stato inserito precedentemente
 // 4 se il numero digitato è presente nei numeri della CPU il gioco termina altrimenti si continua con un altro numero
 // 5 quando il gioco finisce esce una finestra con i risultati ovvero "quante volte l'utente ha digitato un numero prima di perdere".
+
+function randomCPUnumber(min, max) {
+    return Math.floor(Math.random() * (max - min));
+}
+
+const bomb = [];
+
+while ( bomb.length < 16) {
+    let number = randomCPUnumber(1, 100);
+    
+    if (!bomb.includes(number)) {
+        bomb.push(number);
+    }
+}
+
+console.log(bomb);
