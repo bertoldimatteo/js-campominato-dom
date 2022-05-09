@@ -11,6 +11,15 @@
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
+
+
+// BONUS 
+
+// B1 creo un prompt con la difficoltà che l'utente vuole impostare
+
+// const level = Number(prompt("Benvenuto! indica la difficoltà da impostare da 0 a 2"));
+
+
 // 1 creo una funzione che genera 16 numeri casuali da 1 a 100 per la CPU.
 // 2 verifico che non ci siano numeri duplicati
 //   salvo i numeri generati in un array
