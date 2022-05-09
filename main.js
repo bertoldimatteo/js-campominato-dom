@@ -14,11 +14,6 @@
 // 1 creo una funzione che genera 16 numeri casuali da 1 a 100 per la CPU.
 // 2 verifico che non ci siano numeri duplicati
 //   salvo i numeri generati in un array
-// 3 chiedo all'utente di inserire un numero da 1 a 100 per 84 volte (max).
-//   faccio un check che il numero inserito non sia già stato inserito precedentemente
-// 4 se il numero digitato è presente nei numeri della CPU il gioco termina altrimenti si continua con un altro numero
-// 5 quando il gioco finisce esce una finestra con i risultati ovvero "quante volte l'utente ha digitato un numero prima di perdere".
-
 function randomCPUnumber(min, max) {
     return Math.floor(Math.random() * (max - min));
 }
@@ -34,3 +29,14 @@ while ( bomb.length < 16) {
 }
 
 console.log(bomb);
+
+let userNumber;
+
+// 3 chiedo all'utente di inserire un numero da 1 a 100 per 84 volte (max).
+do {
+    userNumber = Number(prompt("Digita un numero da 1 a 100"))
+} while (isNaN(userNumber))
+//   faccio un check che il numero inserito non sia già stato inserito precedentemente
+// 4 se il numero digitato è presente nei numeri della CPU il gioco termina altrimenti si continua con un altro numero
+// 5 quando il gioco finisce esce una finestra con i risultati ovvero "quante volte l'utente ha digitato un numero prima di perdere".
+
