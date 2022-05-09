@@ -42,6 +42,8 @@ while (userNumberInsert.length < 5) {
     //   faccio un check che il numero inserito non sia già stato inserito precedentemente
     if (!userNumberInsert.includes(userNumber)) {
         userNumberInsert.push(userNumber);
+    } else {
+        alert("Il numero è già stato inserito, scegline un'altro")
     }
 }
 
