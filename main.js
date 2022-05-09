@@ -46,7 +46,7 @@ while (!bomb.includes(userNumber) && userNumberInsert.length < 5) {
         alert("Il numero è già stato inserito, scegline un'altro")
     }
     if ( bomb.includes(userNumber) ){
-        alert(`Hai perso, hai digitato un totale di ${userNumberInsert.length} numeri`);
+        alert(`Hai perso, hai digitato un totale di ${userNumberInsert.length} parole`);
     };
 }
 
