@@ -35,7 +35,7 @@ const userNumberInsert = [];
 
 let userNumber;
 
-while (userNumberInsert.length < 5) {
+while (!bomb.includes(userNumber) && userNumberInsert.length < 5) {
     do {
         userNumber = Number(prompt("Digita un numero da 1 a 100"))
     } while (isNaN(userNumber))
@@ -45,9 +45,14 @@ while (userNumberInsert.length < 5) {
     } else {
         alert("Il numero è già stato inserito, scegline un'altro")
     }
+    if ( bomb.includes(userNumber) ){
+        alert("Hai perso")
+    };
 }
 
 console.log(userNumberInsert);
 // 4 se il numero digitato è presente nei numeri della CPU il gioco termina altrimenti si continua con un altro numero
+
+
 // 5 quando il gioco finisce esce una finestra con i risultati ovvero "quante volte l'utente ha digitato un numero prima di perdere".
 
