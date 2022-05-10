@@ -1,10 +1,6 @@
 
 // IN CASO DI SCLERO PIANGI SOLAMENTE DOPO AVER SALVATO
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
-};
-
 let level;
 let totalNumber;
 
@@ -31,7 +27,8 @@ function easyHide() {
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
     for ( let i = 0; i < totalNumber; i++) {
-        getRndInteger(1, 50);
+        let arrayNumber = 0;
+        let easyArray = [];
 
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
@@ -39,14 +36,23 @@ function easyHide() {
         const addElement = document.getElementById("box-easy");
         addElement.appendChild(newDiv);
 
+        while (easyArray.length < totalNumber) {
+            const number = Math.floor((Math.random() * 50) + 1);
+            
+            if (!easyArray.includes(number)) {
+                easyArray.push(number);
+            }
+        }
+
         const insideNumber = document.createElement("p");
         insideNumber.classList.add("number");
-        insideNumber.append(getRndInteger(1, 50));
+        insideNumber.append(easyArray[arrayNumber]);
         const addNumber = document.getElementById(`insideBox${boxNumber}`);
         addNumber.appendChild(insideNumber);
 
         boxNumber++;
         number++;
+        arrayNumber++;
     }
     
 }
