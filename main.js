@@ -17,8 +17,23 @@
 
 // B1 creo un prompt con la difficoltà che l'utente vuole impostare
 
-// const level = Number(prompt("Benvenuto! indica la difficoltà da impostare da 0 a 2"));
+let level;
 
+do {
+    level = Number(prompt("Benvenuto! indica la difficoltà da impostare da 0 a 2"));
+} while ( isNaN(level) || level < 0 || level > 2);
+
+let totalNumber;
+
+if (level === 0) {
+    totalNumber = 100;
+} else if ( level === 1) {
+    totalNumber = 80;
+} else {
+    totalNumber = 50;
+}
+
+console.log(totalNumber);
 
 // 1 creo una funzione che genera 16 numeri casuali da 1 a 100 per la CPU.
 // 2 verifico che non ci siano numeri duplicati
@@ -28,8 +43,10 @@ function randomCPUnumber(min, max) {
 }
 
 const bomb = [];
+const numberBombs = 16;
+const numberAttempts = totalNumber - numberBombs;
 
-while ( bomb.length < 16) {
+while ( bomb.length < numberBombs ) {
     let number = randomCPUnumber(1, 100);
     
     if (!bomb.includes(number)) {
