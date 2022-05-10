@@ -4,23 +4,27 @@
     padding: 0;
     box-sizing: border-box;
 };
-
 body {
     background-color: aqua;
-}
+};
 .container {
     max-width: 1080px;
-    margin: 250px auto;
-}
+    margin: 350px auto;
+};
 /* elements */
 .box {
-    height: 80px;
-    width: 200px;
-    border: 1px solid black;
-    margin: 50px auto;
-}
+    height: 100px;
+    width: 100px;
+    background-color: salmon;
+    margin: 30px auto;
+};
 /* behaviuor */
 .hidden {
     display: none;
-}
+};
+.tranform {
+    transform-origin: center;
+    transform: scale(7);
+    transition: 1s;
+};
 /* animations */
