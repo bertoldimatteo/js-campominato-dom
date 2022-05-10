@@ -26,25 +26,26 @@ function easyHide() {
     totalNumber = 50;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
+    let arrayNumber = 0;
+    let easyArray = [];
+
+    while (easyArray.length < totalNumber) {
+        let number = Math.floor((Math.random() * 50) + 1);
+        
+        if (!easyArray.includes(number)) {
+            easyArray.push(number);
+        }
+    }
+
+    console.log(easyArray);
+
     for ( let i = 0; i < totalNumber; i++) {
-        let arrayNumber = 0;
-        let easyArray = [];
 
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
         newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-easy");
         addElement.appendChild(newDiv);
-
-        while (easyArray.length < totalNumber) {
-            let number = Math.floor((Math.random() * 50) + 1);
-            
-            if (!easyArray.includes(number)) {
-                easyArray.push(number);
-            }
-        }
-
-        console.log(easyArray);
 
         const insideNumber = document.createElement("p");
         insideNumber.classList.add("number");
@@ -68,23 +69,26 @@ function mediumHide() {
     totalNumber = 80;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
+    let arrayNumber = 0;
+    let mediumArray = [];
+
+    while (mediumArray.length < totalNumber) {
+        const number = Math.floor((Math.random() * 80) + 1);
+        
+        if (!mediumArray.includes(number)) {
+            mediumArray.push(number);
+        }
+    }
+
+    console.log(mediumArray);
+
     for ( let i = 0; i < totalNumber; i++) {
-        let arrayNumber = 0;
-        let mediumArray = [];
 
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
         newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-medium");
         addElement.appendChild(newDiv);
-
-        while (mediumArray.length < totalNumber) {
-            const number = Math.floor((Math.random() * 80) + 1);
-            
-            if (!mediumArray.includes(number)) {
-                mediumArray.push(number);
-            }
-        }
 
         const insideNumber = document.createElement("p");
         insideNumber.classList.add("number");
@@ -107,27 +111,30 @@ function hardHide() {
     totalNumber = 100;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
+    let arrayNumber = 0;
+    let hardArray = [];
+
+    while (hardArray.length < totalNumber) {
+        const number = Math.floor((Math.random() * 100) + 1);
+        
+        if (!hardArray.includes(number)) {
+            hardArray.push(number);
+        }
+    }
+
+    console.log(hardArray);
+
     for ( let i = 0; i < totalNumber; i++) {
-        let arrayNumber = 0;
-        let easyArray = [];
 
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
         newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-hard");
         addElement.appendChild(newDiv);
-
-        while (easyArray.length < totalNumber) {
-            const number = Math.floor((Math.random() * 100) + 1);
-            
-            if (!easyArray.includes(number)) {
-                easyArray.push(number);
-            }
-        }
         
         const insideNumber = document.createElement("p");
         insideNumber.classList.add("number");
-        insideNumber.append(easyArray[arrayNumber]);
+        insideNumber.append(hardArray[arrayNumber]);
         const addNumber = document.getElementById(`insideBox${boxNumber}`);
         addNumber.appendChild(insideNumber);
 
