@@ -58,9 +58,17 @@ function mediumHide() {
     for ( let i = 0; i < totalNumber; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
+        newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-medium");
         addElement.appendChild(newDiv);
-        newDiv.append(number); 
+
+        const insideNumber = document.createElement("p");
+        insideNumber.classList.add("number");
+        insideNumber.append(number);
+        const addNumber = document.getElementById(`insideBox${boxNumber}`);
+        addNumber.appendChild(insideNumber);
+
+        boxNumber++;
         number++;
     }
 }
@@ -77,9 +85,17 @@ function hardHide() {
     for ( let i = 0; i < totalNumber; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
+        newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-hard");
         addElement.appendChild(newDiv);
-        newDiv.append(number); 
+        
+        const insideNumber = document.createElement("p");
+        insideNumber.classList.add("number");
+        insideNumber.append(number);
+        const addNumber = document.getElementById(`insideBox${boxNumber}`);
+        addNumber.appendChild(insideNumber);
+
+        boxNumber++;
         number++;
     }
 }
