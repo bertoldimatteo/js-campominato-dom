@@ -3,45 +3,64 @@
 
 // B1 creo un prompt con la difficoltà che l'utente vuole impostare
 
-let boxEasy = document.querySelector(".box-easy");
-let boxMedium = document.querySelector(".box-medium");
-let boxHard = document.querySelector(".box-hard");
+let boxEasy = document.getElementById("box-easy");
+let boxMedium = document.getElementById("box-medium");
+let boxHard = document.getElementById("box-hard");
 
 let level;
 let totalNumber;
-
-if (level === boxEasy) {
-    totalNumber = 100;
-} else if ( level === boxMedium) {
-    totalNumber = 80;
-} else {
-    totalNumber = 50;
-}
-
-let viewMode = document.getElementById("numberBombs").innerHTML = totalNumber;
-console.log(totalNumber);
 
 boxEasy.addEventListener("click", easyHide);
 boxMedium.addEventListener("click", mediumHide);
 boxHard.addEventListener("click", hardHide);
 
+
+
+
 function easyHide() {
-    boxEasy.classList.add("tranform")
+    boxEasy.classList.add("transform")
     boxMedium.classList.add("hidden");
     boxHard.classList.add("hidden");
+    totalNumber = 50;
+    document.getElementById("numberBombs").innerHTML = totalNumber;
+
+    for ( let i = 0; i < totalNumber; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("mini-box");
+        const addElement = document.getElementById("box-easy");
+        addElement.appendChild(newDiv);
+    }
     
 }
 
 function mediumHide() {
-    boxMedium.classList.add("tranform")
+    boxMedium.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxHard.classList.add("hidden");
+    totalNumber = 80;
+    document.getElementById("numberBombs").innerHTML = totalNumber;
+
+    for ( let i = 0; i < totalNumber; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("mini-box");
+        const addElement = document.getElementById("box-medium");
+        addElement.appendChild(newDiv);
+    }
 }
 
 function hardHide() {
-    boxHard.classList.add("tranform")
+    boxHard.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxMedium.classList.add("hidden");
+    totalNumber = 100;
+    document.getElementById("numberBombs").innerHTML = totalNumber;
+
+    for ( let i = 0; i < totalNumber; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("mini-box");
+        const addElement = document.getElementById("box-hard");
+        addElement.appendChild(newDiv);
+    }
 }
 
 // 1 creo una funzione che genera 16 numeri casuali da 1 a 100 per la CPU.
