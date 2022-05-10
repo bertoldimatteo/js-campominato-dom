@@ -17,8 +17,7 @@ boxEasy.addEventListener("click", easyHide);
 boxMedium.addEventListener("click", mediumHide);
 boxHard.addEventListener("click", hardHide);
 
-
-
+let number = 1;
 
 function easyHide() {
     boxEasy.classList.add("transform")
@@ -32,6 +31,8 @@ function easyHide() {
         newDiv.classList.add("mini-box");
         const addElement = document.getElementById("box-easy");
         addElement.appendChild(newDiv);
+        newDiv.append(number); 
+        number++;
     }
     
 }
@@ -50,6 +51,8 @@ function mediumHide() {
         newDiv.classList.add("mini-box");
         const addElement = document.getElementById("box-medium");
         addElement.appendChild(newDiv);
+        newDiv.append(number); 
+        number++;
     }
 }
 
@@ -67,6 +70,8 @@ function hardHide() {
         newDiv.classList.add("mini-box");
         const addElement = document.getElementById("box-hard");
         addElement.appendChild(newDiv);
+        newDiv.append(number); 
+        number++;
     }
 }
 
