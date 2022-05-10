@@ -1,7 +1,10 @@
 
-// BONUS 
+// IN CASO DI SCLERO PIANGI SOLAMENTE DOPO AVER SALVATO
 
-// B1 creo un prompt con la difficoltà che l'utente vuole impostare
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+};
+
 let level;
 let totalNumber;
 
@@ -28,6 +31,8 @@ function easyHide() {
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
     for ( let i = 0; i < totalNumber; i++) {
+        getRndInteger(1, 50);
+
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
         newDiv.setAttribute("id", `insideBox${boxNumber}`);
@@ -36,7 +41,7 @@ function easyHide() {
 
         const insideNumber = document.createElement("p");
         insideNumber.classList.add("number");
-        insideNumber.append(number);
+        insideNumber.append(getRndInteger(1, 50));
         const addNumber = document.getElementById(`insideBox${boxNumber}`);
         addNumber.appendChild(insideNumber);
 
