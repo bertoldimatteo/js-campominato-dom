@@ -18,6 +18,7 @@ boxMedium.addEventListener("click", mediumHide);
 boxHard.addEventListener("click", hardHide);
 
 let number = 1;
+let boxNumber = 1;
 
 function easyHide() {
     boxEasy.classList.add("transform")
@@ -29,9 +30,17 @@ function easyHide() {
     for ( let i = 0; i < totalNumber; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("mini-box");
+        newDiv.setAttribute("id", `insideBox${boxNumber}`);
         const addElement = document.getElementById("box-easy");
         addElement.appendChild(newDiv);
-        newDiv.append(number); 
+
+        const insideNumber = document.createElement("p");
+        insideNumber.classList.add("number");
+        insideNumber.append(number);
+        const addNumber = document.getElementById(`insideBox${boxNumber}`);
+        addNumber.appendChild(insideNumber);
+
+        boxNumber++;
         number++;
     }
     
