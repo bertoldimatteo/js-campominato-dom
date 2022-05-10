@@ -11,18 +11,29 @@ body {
     margin: 300px auto 0 auto;
 }
 .box {
-    width: 250px;
-    height: 150px;
     background-color: salmon;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
-    padding: 5px;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 5px;
+}
+.easy-box {
+    width: 236px;
+    height: 150px;
+}
+.medium-box {
+    width: 236px;
+    height: 200px;
+}
+.hard-box {
+    width: 236px;
+    height: 232px;
 }
 .mini-box {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background-color: antiquewhite;
 
 }

@@ -2,13 +2,16 @@
 // BONUS 
 
 // B1 creo un prompt con la difficoltà che l'utente vuole impostare
+let level;
+let totalNumber;
 
 let boxEasy = document.getElementById("box-easy");
 let boxMedium = document.getElementById("box-medium");
 let boxHard = document.getElementById("box-hard");
 
-let level;
-let totalNumber;
+boxEasy.classList.add("easy-box");
+boxMedium.classList.add("easy-box");
+boxHard.classList.add("easy-box");
 
 boxEasy.addEventListener("click", easyHide);
 boxMedium.addEventListener("click", mediumHide);
@@ -34,6 +37,8 @@ function easyHide() {
 }
 
 function mediumHide() {
+    boxMedium.classList.remove("easy-box")
+    boxMedium.classList.add("medium-box")
     boxMedium.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxHard.classList.add("hidden");
@@ -49,6 +54,8 @@ function mediumHide() {
 }
 
 function hardHide() {
+    boxHard.classList.remove("easy-box")
+    boxHard.classList.add("hard-box")
     boxHard.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxMedium.classList.add("hidden");
