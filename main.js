@@ -47,7 +47,7 @@ let userNumber;
 while (!bomb.includes(userNumber) && userNumberInsert.length < 5) {
     do {
         userNumber = Number(prompt("Digita un numero da 1 a 100"))
-    } while (isNaN(userNumber))
+    } while (isNaN(userNumber) || userNumber < 1 || userNumber > 100)
     //   faccio un check che il numero inserito non sia già stato inserito precedentemente
     if (!userNumberInsert.includes(userNumber)) {
         userNumberInsert.push(userNumber);
