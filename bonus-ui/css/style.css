@@ -1,3 +1,4 @@
+/* general */
 * {
     margin: 0;
     padding: 0;
@@ -7,3 +8,19 @@
 body {
     background-color: aqua;
 }
+.container {
+    max-width: 1080px;
+    margin: 250px auto;
+}
+/* elements */
+.box {
+    height: 80px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 50px auto;
+}
+/* behaviuor */
+.hidden {
+    display: none;
+}
+/* animations */
