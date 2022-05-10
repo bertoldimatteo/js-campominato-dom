@@ -1,3 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: aqua;
+}
+.container {
+    max-width: 1280px;
+    margin: 300px auto;
+}
+.box {
+    width: 250px;
+    height: 150px;
+    background-color: salmon;
+    margin: 30px auto;
+}
+/* transform */
+.hidden {
+    display: none;
+}
+.tranform {
+    transform: scale(4);
+    transition: 1s;
 }
