@@ -147,23 +147,23 @@ function hardHide() {
 // 1 creo una funzione che genera 16 numeri casuali da 1 a 100 per la CPU.
 // 2 verifico che non ci siano numeri duplicati
 //   salvo i numeri generati in un array
-// function randomCPUnumber(min, max) {
-//     return Math.floor(Math.random() * (max - min));
-// }
+function randomCPUnumber(min, max) {
+    return Math.floor(Math.random() * (max - min));
+}
 
-// const bomb = [];
-// const numberBombs = 16;
-// const numberAttempts = totalNumber - numberBombs;
+const bomb = [];
+const numberBombs = 16;
+const numberAttempts = totalNumber - numberBombs;
 
-// while ( bomb.length < numberBombs ) {
-//     let number = randomCPUnumber(1, 100);
+while ( bomb.length < numberBombs ) {
+    let number = randomCPUnumber(1, 100);
     
-//     if (!bomb.includes(number)) {
-//         bomb.push(number);
-//     }
-// }
+    if (!bomb.includes(number)) {
+        bomb.push(number);
+    }
+}
 
-// console.log(bomb);
+console.log(bomb);
 
 // 3 chiedo all'utente di inserire un numero da 1 a 100.
 // const userNumberInsert = [];
@@ -190,4 +190,3 @@ function hardHide() {
 
 
 // 5 quando il gioco finisce esce una finestra con i risultati ovvero "quante volte l'utente ha digitato un numero prima di perdere".
-
