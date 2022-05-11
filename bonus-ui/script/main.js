@@ -8,6 +8,10 @@ let boxEasy = document.getElementById("box-easy");
 let boxMedium = document.getElementById("box-medium");
 let boxHard = document.getElementById("box-hard");
 
+let removeEasyTitle = document.getElementById("easy-title");
+let removeMediumTitle = document.getElementById("medium-title");
+let removeHardTitle = document.getElementById("hard-title");
+
 boxEasy.classList.add("easy-box");
 boxMedium.classList.add("easy-box");
 boxHard.classList.add("easy-box");
@@ -20,9 +24,11 @@ let number = 1;
 let boxNumber = 1;
 
 function easyHide() {
-    boxEasy.classList.add("transform")
+    boxEasy.classList.add("transform");
     boxMedium.classList.add("hidden");
     boxHard.classList.add("hidden");
+    removeEasyTitle.classList.add("hidden");
+    boxEasy.classList.remove("pulse-box")
     totalNumber = 50;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
@@ -66,6 +72,8 @@ function mediumHide() {
     boxMedium.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxHard.classList.add("hidden");
+    removeMediumTitle.classList.add("hidden");
+    boxMedium.classList.remove("pulse-box")
     totalNumber = 80;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
@@ -108,6 +116,8 @@ function hardHide() {
     boxHard.classList.add("transform")
     boxEasy.classList.add("hidden");
     boxMedium.classList.add("hidden");
+    removeHardTitle.classList.add("hidden");
+    boxHard.classList.remove("pulse-box")
     totalNumber = 100;
     document.getElementById("numberBombs").innerHTML = totalNumber;
 
