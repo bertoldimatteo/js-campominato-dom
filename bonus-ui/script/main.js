@@ -30,7 +30,6 @@ function easyHide() {
     removeEasyTitle.classList.add("hidden");
     boxEasy.classList.remove("pulse-box")
     totalNumber = 50;
-    document.getElementById("numberBombs").innerHTML = totalNumber;
 
     let arrayNumber = 0;
     let easyArray = [];
@@ -75,7 +74,6 @@ function mediumHide() {
     removeMediumTitle.classList.add("hidden");
     boxMedium.classList.remove("pulse-box")
     totalNumber = 80;
-    document.getElementById("numberBombs").innerHTML = totalNumber;
 
     let arrayNumber = 0;
     let mediumArray = [];
@@ -119,7 +117,6 @@ function hardHide() {
     removeHardTitle.classList.add("hidden");
     boxHard.classList.remove("pulse-box")
     totalNumber = 100;
-    document.getElementById("numberBombs").innerHTML = totalNumber;
 
     let arrayNumber = 0;
     let hardArray = [];
